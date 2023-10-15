@@ -275,11 +275,6 @@ html {
 /* ABOUT
 --------------------------------------------------------------------------------------------------------------- */
 
-/* вся секция */
-.about {
-  display: flex;
-}
-
 /* класс для колонок */
 .about__column {
   padding: 0 50px 180px 50px;
@@ -351,7 +346,6 @@ html {
 /* адресс */
 .footer__address {
   grid-column: 1/2;
-  width: 240px;
   width: 240px;
   font-size: 18px;
   font-style: normal;
