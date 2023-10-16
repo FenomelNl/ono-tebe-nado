@@ -1,7 +1,3 @@
-html {
-  scroll-behavior: smooth;
-}
-
 /* HEADER 
 --------------------------------------------------------------------------------------------------------------- */
 
@@ -37,8 +33,12 @@ html {
   list-style: none;
 }
 
+.header__link:hover {
+  color: #808080;
+}
+
 /* активная ссылка */
-.header__link_active a {
+.header__link_active {
   text-decoration: none;
 }
 
@@ -67,7 +67,6 @@ html {
 .cover {
   min-width: 1100px;
   width: 100%;
-  max-width: none;
   margin: auto;
   position: relative;
   display: flex;
@@ -76,31 +75,34 @@ html {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: 1;
-  overflow: auto;
 }
 
 /* затемнение */
 .overlay {
   background-color: rgb(0 0 0 / 0.6);
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   z-index: 2;
 }
 
+.obhod {
+  width: 100%;
+  display: grid;
+}
+
 /* заголовок */
 .cover__title {
   display: grid;
-  width: 100%;
-  height: 100%;
   grid-template-rows: repeat(3 1fr);
-  gap: 20px;
-  padding: 165px 50px 237px;
+  padding: 165px 50px 0px;
   color: #fff;
   font-size: 100px;
   font-style: normal;
   font-weight: 700;
-  line-height: 1.0em;
+  line-height: 1em;
   letter-spacing: 30px;
   z-index: 3;
 }
@@ -109,17 +111,20 @@ html {
   grid-row: 1/2;
   text-align: start;
   line-height: 1.15em;
+  padding-bottom: 20px;
 }
 
 .aligned_text_center {
   grid-row: 2/3;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 .aligned_text_right {
   grid-row: 3/4;
   text-align: right;
   align-items: end;
+  padding-bottom: 135px;
 }
 
 .letter_spacing_extented {
@@ -132,10 +137,12 @@ html {
 
 /* контейнер для подзаголовка и кнопки */
 .cover__discreption {
-  position: absolute;
   display: flex;
-  right: 50px;
-  bottom: 50px;
+  justify-content: flex-end;
+  align-items: center;
+  grid-row: 3;
+  padding-right: 50px;
+  padding-bottom: 50px;
   color: #fff;
   font-size: 22px;
   font-style: normal;
@@ -148,7 +155,6 @@ html {
   text-align: center;
   word-spacing: 17px;
   width: 633px;
-  padding-top: 12px;
   margin-right: 78px;
   line-height: 1.27em;
 }
@@ -161,10 +167,6 @@ html {
   color: #fff;
   font-size: 22px;
   font-weight: 400;
-}
-
-.bet_button a {
-  text-decoration: none;
 }
 
 /* LOTS 
@@ -197,7 +199,7 @@ html {
 .lots__card_list_item {
   position: relative;
   flex-basis: 430px;
-  height: 450px;
+  min-height: 450px;
   font-style: normal;
   flex-grow: 1;
 }
@@ -206,40 +208,31 @@ html {
   text-decoration: none;
 }
 
-.card_type_film {
+.card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: 100%;
-  background-image: url(../images/card-lot-01.jpg);
   background-size: cover;
   background-position: center;
   z-index: 1;
+}
+
+.card:hover {
+  border: 3px solid #ff0000;
+}
+
+.card_type_film {
+  background-image: url(../images/card-lot-01.jpg);
 }
 
 .card_type_book {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/card-lot-02.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
 }
 
 .card_type_picture {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  height: 100%;
   background-image: url(../images/card-lot-03.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: 1;
 }
 
 .card_title {
@@ -270,6 +263,10 @@ html {
   font-size: 20px;
   font-weight: 400;
   text-underline-position: under;
+}
+
+.lots__look_more_link:hover {
+  color: #808080;
 }
 
 /* ABOUT
@@ -375,9 +372,17 @@ html {
   line-height: normal;
 }
 
+.footer__menu_link:hover {
+  color: #808080;
+}
+
 /* активаня ссылка меню */
-.footer__menu_link_active a {
+.footer__menu_link_active {
   text-decoration: none;
+}
+
+.footer__menu_link_active:hover {
+  color: #808080;
 }
 
 /* список ссылок на социальные сети */

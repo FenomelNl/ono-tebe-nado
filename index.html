@@ -10,17 +10,17 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="header__menu">
         <ul class="header__links_list">
-          <li class="header__links_list_item_nobullit header__link_active">
-            <a href="#0">главная</a>
+          <li class="header__links_list_item_nobullit">
+            <a class="header__link_active" href="#0">главная</a>
           </li>
           <li>
-            <a href="#lots">посмотреть лоты</a>
+            <a class="header__link" href="#lots">посмотреть лоты</a>
           </li>
           <li>
-            <a href="#about">об аукционе</a>
+            <a class="header__link" href="#about">об аукционе</a>
           </li>
         </ul>
       </nav>
@@ -40,6 +40,7 @@
     <main>
       <section class="cover">
         <div class="overlay"></div>
+        <div class="obhod">
         <h1 class="cover__title">
           <span class="aligned_text">
             <span class="">О</span
@@ -54,18 +55,18 @@
           </span>
         </h1>
         <div class="cover__discreption">
-          <span class="cover__discreption_text">
+          <p class="cover__discreption_text">
             АУКЦИОН ВЕЩЕЙ, В КОТОРЫЕ НИКТО НЕ ВЕРИЛ
-          </span>
+          </p>
           <button class="bet_button" type="button">СДЕЛАТЬ СТАВКУ</button>
-        </div>
+        </div></div>
       </section>
       <section class="lots" id="lots">
-        <h3 class="lots__heading">Лоты</h3>
+        <h2 class="lots__heading">Лоты</h2>
         <ul class="lots__card_list">
           <li class="lots__card_list_item">
             <a class="lots__card_link" href="#0">
-              <article class="card_type_film">
+              <article class="card card_type_film">
                 <div class="overlay"></div>
                 <h3 class="card_title">
                   Фильм режиссёра, который бросил киношколу
@@ -80,7 +81,7 @@
           </li>
           <li class="lots__card_list_item">
             <a class="lots__card_link" href="#0">
-              <article class="card_type_book">
+              <article class="card card_type_book">
                 <div class="overlay"></div>
                 <h3 class="card_title">
                   Книга, где описан один скучный день из жизни рекламного агента
@@ -98,7 +99,7 @@
           </li>
           <li class="lots__card_list_item">
             <a class="lots__card_link" href="#0">
-              <article class="card_type_picture">
+              <article class="card card_type_picture">
                 <div class="overlay"></div>
                 <h3 class="card_title">
                   Картина, которую повторит даже 5-летний сын маминой подруги
@@ -155,13 +156,13 @@
       <nav class="footer__menu">
         <ul class="footer__menu_list">
           <li class="footer__menu_list_item footer__menu_link_active">
-            <a href="#0">главная</a>
+            <a class="footer__menu_link_active" href="#header">главная</a>
           </li>
           <li class="footer__menu_list_item">
-            <a href="#lots">посмотреть лоты</a>
+            <a class="footer__menu_link" href="#lots">посмотреть лоты</a>
           </li>
           <li class="footer__menu_list_item">
-            <a href="#about">об аукционе</a>
+            <a class="footer__menu_link" href="#about">об аукционе</a>
           </li>
         </ul>
       </nav>
